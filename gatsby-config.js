@@ -3,6 +3,7 @@ module.exports = {
     title: "Weho Sourdough",
   },
   plugins: [
+    "gatsby-plugin-postcss",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
