@@ -6,7 +6,7 @@ import Img from 'gatsby-image'
 const Header = () => {
   const data = useStaticQuery(graphql`
     query {
-      wehoLogoColor: file(relativePath: { eq: "weho-sourdough-logo-web-final-color-1800.png" }) {
+      wehoLogoColor: file(relativePath: { eq: "weho-sourdough-color-1800.png" }) {
         childImageSharp {
           fluid(maxWidth: 1600) {
             ...GatsbyImageSharpFluid
@@ -17,7 +17,7 @@ const Header = () => {
   `);
 
   return (
-    <header className="sticky top-0 bg-white shadow">
+    <header className="sticky top-0 bg-white shadow z-50">
         <div className="w-full">
             <Img
             fluid={data.wehoLogoColor.childImageSharp.fluid}

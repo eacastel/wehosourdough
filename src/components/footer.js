@@ -1,30 +1,17 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
 
 
-const Header = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      wehoLogoColor: file(relativePath: { eq: "weho-sourdough-logo-web-final-white.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 1600) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
+
+const Footer = () => {
+
 
   return (
-    <header className="sticky top-0 bg-white shadow bg-brown">
-        <div className="w-full">
-            <Img
-            fluid={data.wehoLogoColor.childImageSharp.fluid}
-            alt="Weho Sourdough Logo"
-            />
+    <footer className="">
+        <div className="mt-8 bg-brown p-4 text-sm text-white text-center">
+            <p>{new Date().getFullYear()} &copy; All Rights Reserved Weho Sourdough</p> 
+
         </div>
-    </header>
+    </footer>
   )
 };
-export default Header;
+export default Footer;
