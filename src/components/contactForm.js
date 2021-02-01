@@ -117,9 +117,7 @@ export default () => {
           placeholder="Please write down your order here."
           className="mt-1 p-2 block w-full border-gray-400 rounded border-2"
         />
-        {errors.question && (
-          <div className="msg-error">{errors.question.message}</div>
-        )}
+        {errors.message && <p className="text-error font-medium italic ml-2">Please include your order or request.</p>}
       </label>
           </div>
       <div className="submit-wrapper py-4">
