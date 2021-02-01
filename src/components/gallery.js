@@ -54,38 +54,38 @@ const Gallery = () => {
     <div className="mx-4 text-center">
         <h1>Gallery</h1>
         <gallery className="grid grid-cols-3 gap-4">
-        <div className="object-fill overflow-hidden h-full">
-            <img
+        <div className="object-fill">
+            <img className="rounded-md"
             src={data.imgOne.childImageSharp.resize.src}
             alt="Weho Sourdough Logo"
             />
         </div>
         <div className="object-fill">
-            <img
+            <img className="rounded-md"
             src={data.imgTwo.childImageSharp.resize.src}
             alt="Weho Sourdough Logo"
             />
         </div>
         <div className="object-fill">
-            <img
+            <img className="rounded-md"
             src={data.imgThree.childImageSharp.resize.src}
             alt="Weho Sourdough Logo"
             />
         </div>
         <div className="object-fill">
-        <img
+        <img className="rounded-md"
             src={data.imgFour.childImageSharp.resize.src}
             alt="Weho Sourdough Logo"
             />
         </div>
         <div className="object-fill">
-        <img
+        <img className="rounded-md"
             src={data.imgFive.childImageSharp.resize.src}
             alt="Weho Sourdough Logo"
             />
         </div>
         <div className="object-fill">
-        <img
+        <img className="rounded-md"
             src={data.imgSix.childImageSharp.resize.src}
             alt="Weho Sourdough Logo"
             />

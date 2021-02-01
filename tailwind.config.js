@@ -13,6 +13,7 @@ module.exports = {
         text: '#261b13',
         brown: '#4c3527',
         bggray: '#f8f8f8',
+        error: 'red',
       }
     }
   },
