@@ -26,7 +26,7 @@ const IndexPage = () => {
       <div className="mb-8 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
         <h3 className="font-semibold text-xl mb-2">Artisan</h3>
         <p className="mb-2">
-        Each loaf is made to order. It doesn't get any more "small batch" than this. Each loaf is carefully processed and baked to crisp perfection!
+        Each loaf is made to order, carefully processed and baked to crisp perfection! It doesn't get any more "small batch" than this.  
         </p>
       </div>
     </div>
