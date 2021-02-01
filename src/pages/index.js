@@ -10,9 +10,9 @@ const IndexPage = () => {
     <Header />
     <Feature />
     <main>
-    <div className="flex flex-col mx-2">
+    <div className="flex flex-col pt-4 mx-2">
       <div className="mb-8 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
-        <h3 className="font-semibold text-xl mb-2">Philosophy</h3>
+        <h3 className="font-semibold text-xl mb-2">Delicious</h3>
         <p className="mb-2">
         Poetically, we started baking sourdough in 2016 for the beauty of its 3 ingredients: Flour, Water and Salt. Practically, we bake sourdough for its incomparable and irresistible taste.
         </p>
@@ -26,7 +26,7 @@ const IndexPage = () => {
       <div className="mb-8 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
         <h3 className="font-semibold text-xl mb-2">Artisan</h3>
         <p className="mb-2">
-        We only produce 6 loaves at a time and bake twice a week. It doesn't get any more "small batch" than this. Each loaf is carefully processed and baked to crisp perfection!
+        Each loaf is made to order. It doesn't get any more "small batch" than this. Each loaf is carefully processed and baked to crisp perfection!
         </p>
       </div>
     </div>

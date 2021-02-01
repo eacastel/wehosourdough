@@ -21,11 +21,12 @@ const Feature = () => {
         <div className="text-text">
             
             <div className="text-center mx-4 my-6">
-            <h1 className="text-3xl text-bread">Weho Sourdough</h1>
-            <p>We bake small batches of sourdough bread in West Hollywood!</p>
-            <p><span className="font-bold">Contact us to find out our baking schedule and pre-order a loaf for only $14!</span>  <br />Local pick-up only.</p>
+            <h1 className="text-4xl font-normal text-bread mb-1">Weho Sourdough</h1>
+            <p className="mb-4">We bake small batches of sourdough bread in West Hollywood!</p>
+            <p><span className="font-bold">Contact us to find out our baking schedule <br />and pre-order a loaf for only $14!</span>
+            <br />Local pick-up only.</p>
             <Button />
-            <Img className="rounded-md border border-brown"
+            <Img className="mt-6 rounded-md border border-brown"
             fluid={data.imgEleven.childImageSharp.fluid}
             alt="ears on a round loaf of sourdough"
             />

@@ -99,9 +99,9 @@ export default () => {
       <div className="ml-4">
         <label for="classic"><input type="checkbox" id="classic" ref={register} name="classic" value="Classic" /> Classic White Sourdough (10% Wheat for added flavor)</label>
         <br />
-        <label for="wheat"><input type="checkbox" id="wheat" name="wheat" ref={register} value="20% Wheat" /> 20% Wheat</label><br />
+        <label for="wheat"><input type="checkbox" id="wheat" ref={register} name="wheat" value="20% Wheat" /> 20% Wheat</label><br />
         <label for="wheatgerm"><input type="checkbox" id="wheatgerm" ref={register} name="wheatgerm" value="Add Wheat Germ" /> Add Wheat Germ (+ $2.50)</label><br />
-        <label for="wheatgerm"><input type="checkbox" id="olives" ref={register} name="olives" ref={register} value="Add Olives" /> Add Olives (+ $2.50)</label><br />
+        <label for="olives"><input type="checkbox" id="olives" ref={register} name="olives" value="Add Olives" /> Add Olives (+ $2.50)</label><br />
         <label for="pecans"><input type="checkbox" id="pecans" name="pecans" ref={register} value="Add Pecans" /> Add Pecans (+ $2.50)</label><br />
         </div>
     </div>
