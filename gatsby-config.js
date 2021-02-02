@@ -8,7 +8,7 @@ module.exports = {
     siteUrl: "https://wehosourdough.com",
     author: "Weho Sourdough",
     keywords: "Sourdough Bread, West Hollywood",
-    description: "Sourdough bread in West Hollywood"
+    description: "Sourdough bread bakery in West Hollywood, California"
   },
   plugins: [
     "gatsby-plugin-postcss",

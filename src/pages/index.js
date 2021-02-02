@@ -20,10 +20,20 @@ const IndexPage = () => {
             }
         }
     `);
+  const schema =  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Weho Sourdough",
+    "description": "Sourdough bread bakery in West Hollywood, California",
+    "image": "https://wehosourdough.com/static/a702b0ccb0937043afd76624550e5606/ee604/weho-sourdough-color-1800.png",
+    "url": "https://wehosourdough.com",
+    "telephone": "‪(323) 963-3322‬",
+    }
+
 
   return (
     <Layout>
-      <SEO title="Home" image="" />
+      <SEO title="Home" schemaMarkup={schema} />
       <main>
         <div className="">
           <div className="text-center my-6">
