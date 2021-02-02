@@ -11,13 +11,21 @@ module.exports = {
     description: "Sourdough bread bakery in West Hollywood, California"
   },
   plugins: [
-    "gatsby-plugin-postcss",
-    "gatsby-plugin-react-helmet",
+    `gatsby-plugin-postcss`,
+    `gatsby-plugin-react-helmet`,
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingId: process.env.GA_TRACKING_ID
+        trackingIds: [process.env.GA_TRACKING_ID],
       },
+    },
+    {
+      resolve: `gatsby-plugin-robots-txt`,
+      options: {
+        host: 'https://wehosourdough.com',
+        sitemap: 'https://wehosourdough.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     },
     {
       resolve: `gatsby-plugin-sharp`,
@@ -30,22 +38,23 @@ module.exports = {
         failOnError: true,
       },
     },
-    "gatsby-plugin-react-helmet",
-    "gatsby-plugin-sitemap",
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: "src/images/icon.png",
-        name: "Weho Sourdough | West Hollywood Sourdough",
-        short_name: "Weho Sourdough",
-        start_url: "/",
+        icon: `src/images/icon.png`,
+        lang: `en`,
+        name: `Weho Sourdough | West Hollywood Sourdough`,
+        short_name: `Weho Sourdough`,
+        start_url: `/`,
       },
     },
-    "gatsby-plugin-mdx",
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
+    `gatsby-plugin-mdx`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
         name: "images",
         path: "./src/images/",
@@ -53,7 +62,7 @@ module.exports = {
       __key: "images",
     },
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
         name: "pages",
         path: "./src/pages/",
