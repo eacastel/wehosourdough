@@ -25,7 +25,7 @@ const IndexPage = () => {
     "@type": "Bakery",
     "name": "Weho Sourdough",
     "description": "Sourdough bread bakery in West Hollywood, California",
-    "image": "https://wehosourdough.com/static/a702b0ccb0937043afd76624550e5606/ee604/weho-sourdough-color-1800.png",
+    "image": "https://wehosourdough.com/weho-sourdough-color-1800.png",
     "url": "https://wehosourdough.com",
     "telephone": "‪(323) 963-3322‬",
     }
