@@ -49,7 +49,7 @@ export default () => {
   const showForm = (
     <div className="">
     <form onSubmit={handleSubmit(onSubmit)} method="post">
-      <div className="mt-4">
+      <div className="mt-6">
       <label htmlFor="name">
         <h5 className="font-bold">Your Name</h5>
         <input
@@ -63,7 +63,7 @@ export default () => {
         {errors.name && <p className="text-error font-medium italic ml-2">Name is required</p>}
       </label>
       </div>
-      <div className="mt-4">
+      <div className="mt-6">
         <label htmlFor="phone">
           <h5 className="font-bold">Your Phone</h5>
           <input
@@ -76,7 +76,7 @@ export default () => {
           />
         </label>
       </div>
-      <div className="mt-4">
+      <div className="mt-6">
       <label htmlFor="email">
         <h5 className="font-bold">Email</h5>
         <input
@@ -94,19 +94,19 @@ export default () => {
       </label>
       </div>
 
-    <div className="mt-4">
-    <h5 className="font-bold">Select your Sourdough Bread:</h5>
+    <div className="mt-6">
+    <h5 className="font-bold mb-2">Select your Sourdough Bread:</h5>
       <div className="ml-4">
-        <label for="classic"><input type="checkbox" id="classic" ref={register} name="classic" value="Classic" /> Classic White Sourdough (10% Wheat for added flavor)</label>
+        <label for="classic"><input className="mt-2" type="checkbox" id="classic" ref={register} name="classic" value="Classic" /> Classic White Sourdough (10% Wheat for added flavor)</label>
         <br />
-        <label for="wheat"><input type="checkbox" id="wheat" ref={register} name="wheat" value="20% Wheat" /> 20% Wheat</label><br />
-        <label for="wheatgerm"><input type="checkbox" id="wheatgerm" ref={register} name="wheatgerm" value="Add Wheat Germ" /> Add Wheat Germ (+ $2.50)</label><br />
-        <label for="olives"><input type="checkbox" id="olives" ref={register} name="olives" value="Add Olives" /> Add Olives (+ $2.50)</label><br />
-        <label for="pecans"><input type="checkbox" id="pecans" name="pecans" ref={register} value="Add Pecans" /> Add Pecans (+ $2.50)</label><br />
+        <label for="wheat"><input className="mt-2" type="checkbox" id="wheat" ref={register} name="wheat" value="20% Wheat" /> 20% Wheat</label><br />
+        <label for="wheatgerm"><input className="mt-2" type="checkbox" id="wheatgerm" ref={register} name="wheatgerm" value="Add Wheat Germ" /> Add Wheat Germ (+ $2.50)</label><br />
+        <label for="olives"><input className="mt-2" type="checkbox" id="olives" ref={register} name="olives" value="Add Olives" /> Add Olives (+ $2.50)</label><br />
+        <label for="pecans"><input className="mt-2" type="checkbox" id="pecans" name="pecans" ref={register} value="Add Pecans" /> Add Pecans (+ $2.50)</label><br />
         </div>
     </div>
 
-      <div className="mt-4">
+      <div className="mt-6">
       <label htmlFor="message">
         <h5 className="font-bold">Tell us about your order:</h5>
         <textarea
@@ -121,7 +121,7 @@ export default () => {
       </label>
           </div>
       <div className="submit-wrapper py-4">
-        <button type="submit" className="shadow-md cursor-pointer border border-brown bg-wheat hover:text-wheat hover:shadow-none hover:bg-brown rounded text-text font-medium py-3 px-8 lg:py-4 lg:px-12 xl:py-5 xl:px-16 xl:text-lg">
+        <button type="submit" className="mt-2 shadow-md cursor-pointer border border-brown bg-wheat hover:text-wheat hover:shadow-none hover:bg-brown rounded text-text font-medium py-3 px-8 lg:py-4 lg:px-12 xl:py-5 xl:px-16 xl:text-lg">
           Send
         </button>
       </div>

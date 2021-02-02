@@ -1,13 +1,15 @@
 import React from 'react';
-import Header from '../components/header'
+import Layout from '../components/layout'
 import ContactForm from '../components/contactForm'
-import Footer from '../components/footer'
+import SEO from '../components/seo'
+
 
 const Contact = () => {
   return (
     <div>
-        <Header />
-        <main className="mx-2">
+        <Layout>
+            <SEO title="Order Form" />
+        <main>
             <div className="mt-4 pt-4 text-center">
                 <h1>Place an Order for Pickup!</h1>
                 <p>Fill out the form below to place an order. <br />Or call now:  <a href="tel:+1-‪323-963-3322‬"><span className="font-bold hover:underline">(323) 963-3322‬.</span></a></p>
@@ -16,7 +18,7 @@ const Contact = () => {
             </div>
             <ContactForm />
         </main>
-        <Footer />
+        </Layout>
     </div>
   );
 };

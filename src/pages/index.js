@@ -1,39 +1,70 @@
 import React from "react"
-import Header from '../components/header'
-import Feature from '../components/feature'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import { useStaticQuery, graphql } from 'gatsby'
+import Button from '../components/button'
+import Img from 'gatsby-image'
 import Gallery from '../components/gallery'
-import Footer from '../components/footer'
+
 
 const IndexPage = () => {
+
+  const data = useStaticQuery(graphql`
+        query {
+            imgEleven: file(relativePath: { eq: "front-image.jpg" }) {
+                childImageSharp {
+                    fluid(maxWidth: 1800) {
+                        ...GatsbyImageSharpFluid
+                        }
+                }
+            }
+        }
+    `);
+
   return (
-    <div className="text-text bg-bggray">
-    <Header />
-    <Feature />
-    <main>
-    <div className="flex flex-col pt-4 mx-2">
-      <div className="mb-8 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
-        <h3 className="font-semibold text-xl mb-2">Delicious</h3>
-        <p className="mb-2">
-        Poetically, we started baking sourdough in 2016 for the beauty of its 3 ingredients: Flour, Water and Salt. Practically, we bake sourdough for its incomparable and irresistible taste.
-        </p>
-      </div>
-      <div className="mb-8 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
-        <h3 className="font-semibold text-xl mb-2">Organic</h3>
-        <p className="mb-2">
-        We use our own natural leaven cultivated in West Hollywood and make our breads with 100% Organic King Arthur's Flour unless otherwise specified.
-        </p>
-      </div>
-      <div className="mb-8 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
-        <h3 className="font-semibold text-xl mb-2">Artisan</h3>
-        <p className="mb-2">
-        Each loaf is made to order, carefully processed and baked to crisp perfection! It doesn't get any more "small batch" than this.  
-        </p>
-      </div>
-    </div>
-    <Gallery />
-    </main>
-    <Footer />
-    </div>
+    <Layout>
+      <SEO title="Home" image="" />
+      <main>
+        <div className="">
+          <div className="text-center my-6">
+            <h1 className="text-4xl font-normal text-bread mb-4">Weho Sourdough</h1>
+            <div className="flex flex-col items-center">
+              <div className="w-80 mb-4  text-brown">We bake small batches of sourdough bread in West Hollywood!
+              </div>
+              <div className="w-80 mb-4"><span className="font-bold">Contact us to find out our baking schedule and pre-order today!</span>
+              </div>
+            </div>
+              <Button />
+              <Img className="mt-6 rounded-md border border-brown"
+                fluid={data.imgEleven.childImageSharp.fluid}
+                alt="ears on a round loaf of sourdough"
+              />
+          </div>
+        </div>
+        <div className="flex flex-col pt-4">
+          <div className="mb-8 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
+            <h3 className="font-semibold text-xl mb-2">Delicious</h3>
+            <p className="mb-2">
+            Poetically, we started baking sourdough in 2016 for the beauty of its 3 ingredients: Flour, Water and Salt. Practically, we bake sourdough for its incomparable and irresistible taste.
+            </p>
+          </div>
+          <div className="mb-8 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
+            <h3 className="font-semibold text-xl mb-2">Organic</h3>
+            <p className="mb-2">
+            We use our own natural leaven cultivated in West Hollywood and make our breads with 100% Organic King Arthur's Flour unless otherwise specified.
+            </p>
+          </div>
+          <div className="mb-8 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
+            <h3 className="font-semibold text-xl mb-2">Artisan</h3>
+            <p className="mb-2">
+            Each loaf is made to order, carefully processed and baked to crisp perfection! It doesn't get any more "small batch" than this.  
+            </p>
+          </div>
+        </div>
+        <Gallery />
+      </main>
+    </Layout>
+
     
   )
 }

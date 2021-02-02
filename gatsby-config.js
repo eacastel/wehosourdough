@@ -1,14 +1,22 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: "Weho Sourdough",
     siteUrl: "https://wehosourdough.com",
+    author: "Weho Sourdough",
+    keywords: "Sourdough Bread, West Hollywood",
+    description: "Sourdough bread in West Hollywood"
   },
   plugins: [
     "gatsby-plugin-postcss",
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
-        trackingId: "G-QSRWYYGB5H",
+        trackingId: process.env.GA_TRACKING_ID
       },
     },
     {
