@@ -19,7 +19,7 @@ const Header = () => {
     <header className="sticky top-0 bg-white shadow z-50">
         <div className="w-full">
             <Link to="/">
-                <Img fluid={data.wehoLogo.childImageSharp.fluid} alt="Weho Sourdough Logo" />
+                <Img fluid={data.wehoLogo.childImageSharp.fluid} alt="Weho Sourdough Logo" className="lg:max-w-4xl mx-auto" />
             </Link>
         </div>
     </header>

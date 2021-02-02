@@ -16,7 +16,7 @@ const Layout = ({ children }) => (
         }
       `}
       render={data => (
-        <div className="text-text bg-bggray">
+        <div className="text-text bg-bggray lg:max-w-6xl lg:mx-auto">
           <Header siteTitle={data.site.siteMetadata.title} />
           <div className="mx-4 text-text">
             {children}

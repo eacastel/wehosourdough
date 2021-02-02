@@ -38,7 +38,7 @@ export default () => {
   const showSubmitError = msg => <p className="msg-error">{msg}</p>;
 
   const showThankYou = (
-    <div className="bg-wheat text-center m-4 p-6 rounded-md">
+    <div className="bg-wheat max-w-xl mx-auto text-center m-4 p-6 rounded-md">
       <p>Thank you for your Inquiry! Your message was sent and you will be hearing from our staff shortly. </p>
       <button className="underline font-bold" type="button" onClick={() => setSubmitted(false)}>
         Clear Form
@@ -47,7 +47,7 @@ export default () => {
   );
 
   const showForm = (
-    <div className="">
+    <div className="max-w-xl mx-auto">
     <form onSubmit={handleSubmit(onSubmit)} method="post">
       <div className="mt-6">
       <label htmlFor="name">

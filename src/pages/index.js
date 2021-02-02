@@ -13,7 +13,7 @@ const IndexPage = () => {
         query {
             imgEleven: file(relativePath: { eq: "front-image.jpg" }) {
                 childImageSharp {
-                    fluid(maxWidth: 1800) {
+                    fluid(maxWidth: 2500) {
                         ...GatsbyImageSharpFluid
                         }
                 }
@@ -35,23 +35,24 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" schemaMarkup={schema} />
       <main>
-        <div className="">
-          <div className="text-center my-6">
-            <h1 className="text-4xl font-normal text-bread mb-4">Weho Sourdough</h1>
-            <div className="flex flex-col items-center">
-              <div className="w-80 mb-4  text-brown">We bake small batches of sourdough bread in West Hollywood!
-              </div>
-              <div className="w-80 mb-4"><span className="font-bold">Contact us to find out our baking schedule and pre-order today!</span>
-              </div>
-            </div>
+        <div className="text-center my-6">
+          <div className="items-center md:flex md:flex-row">
+            <div className="max-w-xs mx-auto mb-4 text-brown md:text-left">
+            <h1 className="text-4xl font-normal text-bread  mb-4">Weho Sourdough</h1>
+              <p>We bake small batches of sourdough bread in West Hollywood!</p>
+              <p className="py-4"><span className="font-bold">Contact us to find out our baking schedule and pre-order today!</span></p>
               <Button />
-              <Img className="mt-6 rounded-md border border-brown"
-                fluid={data.imgEleven.childImageSharp.fluid}
-                alt="ears on a round loaf of sourdough"
+            </div>
+            <div className="md:w-1/2 h-full">
+              <Img className="mt-6 rounded-md shadow-md md:mr-8"
+              fluid={data.imgEleven.childImageSharp.fluid}
+              alt="ears on a round loaf of sourdough"
               />
+            </div>
           </div>
+
         </div>
-        <div className="flex flex-col pt-4">
+        <div className="flex flex-col md:flex-row pt-4">
           <div className="mb-8 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
             <h3 className="font-semibold text-xl mb-2">Delicious</h3>
             <p className="mb-2">
