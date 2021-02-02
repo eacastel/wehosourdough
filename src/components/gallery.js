@@ -1,5 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 const Gallery = () => {
 
@@ -7,43 +8,43 @@ const Gallery = () => {
     query {
     imgOne: file(relativePath: { eq: "gallery/1.jpg" }) {
         childImageSharp {
-            resize(width: 500, height: 500) {
-                src
-            }
+            fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
+              }
         }
     }
     imgTwo: file(relativePath: { eq: "gallery/2.jpg" }) {
       childImageSharp {
-        resize(width: 500, height: 500) {
-            src
+            fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
         }
       }
     }
     imgThree: file(relativePath: { eq: "gallery/3.jpg" }) {
       childImageSharp {
-        resize(width: 500, height: 500) {
-            src
+            fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
         }
       }
     }
     imgFour: file(relativePath: { eq: "gallery/4.jpg" }) {
       childImageSharp {
-        resize(width: 500, height: 500) {
-            src
+            fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
         }
       }
     }
     imgFive: file(relativePath: { eq: "gallery/5.jpg" }) {
       childImageSharp {
-        resize(width: 500, height: 500) {
-            src
+            fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
         }
       }
     }
     imgSix: file(relativePath: { eq: "gallery/6.jpg" }) {
       childImageSharp {
-        resize(width: 500, height: 500) {
-            src
+            fluid(maxWidth: 800) {
+                ...GatsbyImageSharpFluid
         }
       }
     }
@@ -55,38 +56,38 @@ const Gallery = () => {
         <h1>Gallery</h1>
         <gallery className="grid grid-cols-3 gap-4">
         <div className="object-fill">
-            <img className="rounded-md"
-            src={data.imgOne.childImageSharp.resize.src}
+            <Img className="rounded-md object-cover h-full"
+            fluid={data.imgOne.childImageSharp.fluid}
             alt="Weho Sourdough Logo"
             />
         </div>
         <div className="object-fill">
-            <img className="rounded-md"
-            src={data.imgTwo.childImageSharp.resize.src}
+            <Img className="rounded-md object-cover h-full"
+            fluid={data.imgTwo.childImageSharp.fluid}
             alt="Weho Sourdough Logo"
             />
         </div>
         <div className="object-fill">
-            <img className="rounded-md"
-            src={data.imgThree.childImageSharp.resize.src}
+            <Img className="rounded-md object-cover h-full"
+            fluid={data.imgThree.childImageSharp.fluid}
             alt="Weho Sourdough Logo"
             />
         </div>
         <div className="object-fill">
-        <img className="rounded-md"
-            src={data.imgFour.childImageSharp.resize.src}
+        <Img className="rounded-md object-cover h-full"
+            fluid={data.imgFour.childImageSharp.fluid}
             alt="Weho Sourdough Logo"
             />
         </div>
         <div className="object-fill">
-        <img className="rounded-md"
-            src={data.imgFive.childImageSharp.resize.src}
+        <Img className="rounded-md object-cover h-full"
+            fluid={data.imgFive.childImageSharp.fluid}
             alt="Weho Sourdough Logo"
             />
         </div>
         <div className="object-fill">
-        <img className="rounded-md"
-            src={data.imgSix.childImageSharp.resize.src}
+        <Img className="rounded-md object-cover h-full"
+            fluid={data.imgSix.childImageSharp.fluid}
             alt="Weho Sourdough Logo"
             />
         </div>

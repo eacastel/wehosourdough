@@ -36,7 +36,7 @@ module.exports = {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.png",
-        name: "Weho Sourdough",
+        name: "Weho Sourdough | West Hollywood Sourdough",
         short_name: "Weho Sourdough",
         start_url: "/",
       },
