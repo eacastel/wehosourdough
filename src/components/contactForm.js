@@ -84,7 +84,7 @@ export default () => {
           name="email"
           id="email"
           className="mt-1 p-2 block w-full border-gray-400 rounded border-2"
-          placeholder="your@email.address"
+          placeholder="your@email.com"
           ref={register({
             required: true,
             pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,

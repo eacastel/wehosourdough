@@ -50,7 +50,6 @@ module.exports = {
         start_url: `/`,
       },
     },
-    `gatsby-plugin-mdx`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
