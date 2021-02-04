@@ -33,7 +33,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Home" schemaMarkup={schema} />
+      <SEO title="Weho Sourdough - Sourdough bread in West Hollywood, California" schemaMarkup={schema} />
       <main>
         <div className="text-center my-6">
           <div className="items-center md:flex md:flex-row">
