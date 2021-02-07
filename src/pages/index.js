@@ -53,19 +53,19 @@ const IndexPage = () => {
 
         </div>
         <div className="flex flex-col md:flex-row pt-4 ">
-          <div className="lg:flex-grow lg:w-1/3 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
+          <div className="lg:flex-grow md:w-1/3 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
             <h3 className="font-semibold text-xl mb-2">Delicious</h3>
             <p className="mb-2">
             Poetically, we started baking sourdough in 2016 for the beauty of its 3 ingredients: Flour, Water and Salt. Practically, we bake sourdough for its incomparable and irresistible taste.
             </p>
           </div>
-          <div className="lg:flex-grow  lg:w-1/3 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
+          <div className="lg:flex-grow  md:w-1/3 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
             <h3 className="font-semibold text-xl mb-2">Organic</h3>
             <p className="mb-2">
             We use our own natural leaven cultivated in West Hollywood and make our breads with 100% Organic King Arthur's Flour unless otherwise specified.
             </p>
           </div>
-          <div className="lg:flex-grow  lg:w-1/3 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
+          <div className="lg:flex-grow  md:w-1/3 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white">
             <h3 className="font-semibold text-xl mb-2">Artisan</h3>
             <p className="mb-2">
             Each loaf is made to order, carefully processed and baked to crisp perfection! It doesn't get any more "small batch" than this.  
