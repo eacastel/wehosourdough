@@ -50,6 +50,14 @@ module.exports = {
         start_url: `/`,
       },
     },
+    {
+      resolve: `gatsby-source-stripe`,
+      options: {
+        objects: ["Price"],
+        secretKey: process.env.STRIPE_SECRET_KEY,
+        downloadFiles: false,
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
