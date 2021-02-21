@@ -99,10 +99,8 @@ export default () => {
       <div className="ml-4">
         <label for="classic"><input className="mt-2" type="checkbox" id="classic" ref={register} name="classic" value="Classic" /> Classic White Sourdough (10% Wheat for added flavor)</label>
         <br />
-        <label for="wheat"><input className="mt-2" type="checkbox" id="wheat" ref={register} name="wheat" value="20% Wheat" /> 20% Wheat</label><br />
-        <label for="wheatgerm"><input className="mt-2" type="checkbox" id="wheatgerm" ref={register} name="wheatgerm" value="Add Wheat Germ" /> Add Wheat Germ (+ $2.50)</label><br />
-        <label for="olives"><input className="mt-2" type="checkbox" id="olives" ref={register} name="olives" value="Add Olives" /> Add Olives (+ $2.50)</label><br />
-        <label for="pecans"><input className="mt-2" type="checkbox" id="pecans" name="pecans" ref={register} value="Add Pecans" /> Add Pecans (+ $2.50)</label><br />
+        <label for="olives"><input className="mt-2" type="checkbox" id="olives" ref={register} name="olives" value="Add Olives" /> Add Olives (Includes Pecans, Grated Lemon Zast, Herbs de Provance,) (+ $5)</label><br />
+        <label for="pecans"><input className="mt-2" type="checkbox" id="pecans" name="pecans" ref={register} value="Add Pecans" /> Add Sesame (+ $2.50)</label><br />
         </div>
     </div>
 
@@ -114,12 +112,15 @@ export default () => {
           name="message"
           id="message"
           rows="3"
-          placeholder="Please write down your order here."
+          placeholder="Please include any additional details or requests about your order such as preferred pickup date and time, etc."
           className="mt-1 p-2 block w-full border-gray-400 rounded border-2"
         />
         {errors.message && <p className="text-error font-medium italic ml-2">Please include your order or request.</p>}
       </label>
           </div>
+          <div>
+          We will contact you after placing your order to arrange payment information and pickup. Orders need to be placed at least 2 days in advance to fit them into the baking schedule.
+        </div>
       <div className="submit-wrapper py-4">
         <button type="submit" className="mt-2 shadow-md cursor-pointer border border-brown bg-wheat hover:text-wheat hover:shadow-none hover:bg-brown rounded text-text font-medium py-3 px-8 lg:py-4 lg:px-12 xl:py-5 xl:px-16 xl:text-lg">
           Send
