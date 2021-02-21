@@ -97,7 +97,7 @@ export default () => {
     <div className="mt-6">
     <h5 className="font-bold mb-2">Select your Sourdough Bread:</h5>
       <div className="ml-4">
-        <label for="classic"><input className="mt-2" type="checkbox" id="classic" ref={register} name="classic" value="Classic" /> Classic White Sourdough (10% Wheat for added flavor)</label>
+        <label for="classic"><input className="mt-2" type="checkbox" id="classic" ref={register} name="classic" value="Classic" /> Classic Weho Sourdough (10% Whole Wheat for added flavor)</label>
         <br />
         <label for="olives"><input className="mt-2" type="checkbox" id="olives" ref={register} name="olives" value="Add Olives" /> Add Olives (Includes Pecans, Grated Lemon Zast, Herbs de Provance,) (+ $5)</label><br />
         <label for="pecans"><input className="mt-2" type="checkbox" id="pecans" name="pecans" ref={register} value="Add Pecans" /> Add Sesame (+ $2.50)</label><br />
