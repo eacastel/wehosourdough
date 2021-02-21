@@ -100,7 +100,7 @@ export default () => {
         <label for="classic"><input className="mt-2" type="checkbox" id="classic" ref={register} name="classic" value="Classic" /> Classic Weho Sourdough (10% Whole Wheat for added flavor)</label>
         <br />
         <label for="sesame"><input className="mt-2" type="checkbox" id="sesame" name="sesame" ref={register} value="Sesame" /> Sesame Weho Sourdough (+ $2.50)</label><br />
-        <label for="olives"><input className="mt-2" type="checkbox" id="olives" ref={register} name="olives" value="Olives" /> Olive Weho Sourdough (Olives, Pecans, Grated Lemon Zest, Herbs de Provence) (+ $5)</label><br />
+        <label for="olives"><input className="mt-2" type="checkbox" id="olives" ref={register} name="olives" value="Olives" /> Olive Weho Sourdough (Olives, Pecans, Grated Lemon Zest, Herbs de Provence) (+ $4.50)</label><br />
 
         </div>
     </div>
