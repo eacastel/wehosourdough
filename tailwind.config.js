@@ -1,6 +1,6 @@
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
-  darkMode: false, 
+  darkMode: false,
   theme: {
     extend: {
       colors: {
@@ -16,9 +16,10 @@ module.exports = {
         brown: '#4c3527',
         bggray: '#f8f8f8',
         error: 'red',
-      }
-    }
+        darkred: '#9e0b0f',
+      },
+    },
   },
   variants: {},
-  plugins: []
-};
+  plugins: [],
+}

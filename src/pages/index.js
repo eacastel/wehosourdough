@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { useStaticQuery, graphql } from 'gatsby'
-import Button from '../components/button'
+import ButtonClosed from '../components/closedForSummer'
 import Img from 'gatsby-image'
 import Gallery from '../components/gallery'
 import Footer from '../components/footer'
@@ -45,11 +45,11 @@ const IndexPage = () => {
               <p>We bake small batches of sourdough bread in West Hollywood!</p>
               <p className='py-4'>
                 <span className='font-bold'>
-                  Contact us to find out our baking schedule and pre-order
-                  today!
+                  We will be closed for the summer holidays. Please check in
+                  after August 20th. Thank you!
                 </span>
               </p>
-              <Button />
+              <ButtonClosed />
             </div>
             <div className='md:w-1/2 h-full'>
               <Img
