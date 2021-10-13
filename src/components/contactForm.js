@@ -4,11 +4,12 @@ import { useForm } from 'react-hook-form'
 export default () => {
   const [submitted, setSubmitted] = useState(false)
   const { register, handleSubmit, setError, errors, reset } = useForm()
-  const GATEWAY = process.env.GATEWAY_URL
+  const GATEWAY_URL =
+    'https://29v8wns725.execute-api.us-east-2.amazonaws.com/prod'
 
   const onSubmit = async (data) => {
     try {
-      await fetch(GATEWAY, {
+      await fetch(GATEWAY_URL, {
         method: 'POST',
         mode: 'cors',
         cache: 'no-cache',
