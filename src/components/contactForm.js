@@ -113,7 +113,7 @@ export default () => {
                 name='classic'
                 value='Classic'
               />{' '}
-              Classic Weho Sourdough (10% Whole Wheat for added flavor)
+              Classic Weho Sourdough - $12.00 (10% Whole Wheat for added flavor)
             </label>
             <br />
             <label for='sesame'>
@@ -125,7 +125,7 @@ export default () => {
                 ref={register}
                 value='Sesame'
               />{' '}
-              Sesame Weho Sourdough (+ $2.50)
+              Sesame Weho Sourdough - $14.50 (Unhulled Sesame Seeds Toasted)
             </label>
             <br />
             <label for='olives'>
@@ -137,8 +137,8 @@ export default () => {
                 name='olives'
                 value='Olives'
               />{' '}
-              Olive Weho Sourdough (Olives, Pecans, Grated Lemon Zest, Herbs de
-              Provence) (+ $4.50)
+              Olive Weho Sourdough - $16.50 (Olives, Pecans, Grated Lemon Zest,
+              Herbs de Provence)
             </label>
             <br />
           </div>

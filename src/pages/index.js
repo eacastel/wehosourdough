@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { useStaticQuery, graphql } from 'gatsby'
-import ButtonClosed from '../components/closedForSummer'
+import Button from '../components/button'
 import Img from 'gatsby-image'
 import Gallery from '../components/gallery'
 import Footer from '../components/footer'
@@ -49,7 +49,7 @@ const IndexPage = () => {
                   after August 20th. Thank you!
                 </span>
               </p>
-              <ButtonClosed />
+              <Button />
             </div>
             <div className='md:w-1/2 h-full'>
               <Img
