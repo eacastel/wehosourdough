@@ -1,14 +1,14 @@
-require("dotenv").config({
+require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
 module.exports = {
   siteMetadata: {
-    title: "Weho Sourdough",
-    siteUrl: "https://wehosourdough.com",
-    author: "Weho Sourdough",
-    keywords: "Sourdough Bread, West Hollywood",
-    description: "Sourdough bread bakery in West Hollywood, California"
+    title: 'Weho Sourdough',
+    siteUrl: 'https://wehosourdough.com',
+    author: 'Weho Sourdough',
+    keywords: 'Sourdough Bread, West Hollywood',
+    description: 'Sourdough bread bakery in West Hollywood, California',
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -24,14 +24,14 @@ module.exports = {
       options: {
         host: 'https://wehosourdough.com',
         sitemap: 'https://wehosourdough.com/sitemap.xml',
-        policy: [{ userAgent: '*', allow: '/' }]
-      }
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
     },
     {
       resolve: `gatsby-plugin-sharp`,
       options: {
         base64Width: 20,
-        forceBase64Format: `png`,  
+        forceBase64Format: `png`,
         useMozJpeg: process.env.GATSBY_JPEG_ENCODER === `MOZJPEG`,
         stripMetadata: true,
         defaultQuality: 70,
@@ -55,18 +55,18 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: 'images',
+        path: './src/images/',
       },
-      __key: "images",
+      __key: 'images',
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: 'pages',
+        path: './src/pages/',
       },
-      __key: "pages",
+      __key: 'pages',
     },
   ],
-};
+}
