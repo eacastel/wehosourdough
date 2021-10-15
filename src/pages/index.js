@@ -45,8 +45,8 @@ const IndexPage = () => {
               <p>We bake small batches of sourdough bread in West Hollywood!</p>
               <p className='py-4'>
                 <span className='font-bold'>
-                  We will be closed for the summer holidays. Please check in
-                  after August 20th. Thank you!
+                  Contact us to find out our baking schedule and pre-order
+                  today!
                 </span>
               </p>
               <Button />
