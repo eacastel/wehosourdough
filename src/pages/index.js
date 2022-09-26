@@ -45,7 +45,7 @@ const IndexPage = () => {
               <p>We had a great run but we moved!</p>
               <p className='py-4'>
                 <span className='font-bold'>
-                  If you are interested in purchasing the logo and URL they are for sale!
+                  If you are interested in purchasing the logo and URL they are for sale! <br />orders@wehosourdough.com
                 </span>
               </p>
               
@@ -74,7 +74,7 @@ const IndexPage = () => {
               We use our own natural leaven cultivated in West Hollywood and
               make our breads with 100% Organic King Arthur's Flour unless
               otherwise specified.
-            </p>
+            </p> 
           </div>
           <div className='lg:flex-grow  md:w-1/3 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white'>
             <h3 className='font-semibold text-xl mb-2'>Artisan</h3>
