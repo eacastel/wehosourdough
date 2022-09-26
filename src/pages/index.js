@@ -40,16 +40,15 @@ const IndexPage = () => {
           <div className='items-center md:flex md:flex-row'>
             <div className='max-w-xs mx-auto mb-4 text-brown md:text-left'>
               <h1 className='text-4xl font-normal text-bread  mb-4'>
-                Weho Sourdough
+                Thank you!
               </h1>
-              <p>We bake small batches of sourdough bread in West Hollywood!</p>
+              <p>We had a great run but we moved!</p>
               <p className='py-4'>
                 <span className='font-bold'>
-                  Contact us to find out our baking schedule and pre-order
-                  today!
+                  If you are interested in purchasing the logo and URL they are for sale!
                 </span>
               </p>
-              <Button />
+              
             </div>
             <div className='md:w-1/2 h-full'>
               <Img
