@@ -40,12 +40,12 @@ const IndexPage = () => {
           <div className='items-center md:flex md:flex-row'>
             <div className='max-w-xs mx-auto mb-4 text-brown md:text-left'>
               <h1 className='text-4xl font-normal text-bread  mb-4'>
-                Thank you!
+                Thank you! The Wehosourdough brand is for sale!
               </h1>
-              <p>We had a great run but we moved!</p>
+              <p>We had a great run but we moved out of town!</p>
               <p className='py-4'>
                 <span className='font-bold'>
-                  If you are interested in purchasing the logo and URL they are for sale! <br />orders@wehosourdough.com
+                  The branding, logo and URL are for sale! <br />Email us at orders@wehosourdough.com
                 </span>
               </p>
               
