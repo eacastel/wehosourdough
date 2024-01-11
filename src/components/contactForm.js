@@ -50,30 +50,30 @@ export default () => {
       <form onSubmit={handleSubmit(onSubmit)} method='post'>
         <div className='mt-6'>
           <label htmlFor='name'>
-            <h5 className='font-bold'>Your Name</h5>
+            <h5 className='font-bold'>Tu nombre</h5>
             <input
               type='text'
               name='name'
               id='name'
-              placeholder='Your name'
+              placeholder='Tu nombre'
               ref={register({ required: true, maxLength: 200 })}
               className='mt-1 p-2 block w-full border-gray-400 rounded border-2'
             />
             {errors.name && (
               <p className='text-error font-medium italic ml-2'>
-                Name is required
+                Es necesario que nos proporciones el nombre de quien hace el pedido.
               </p>
             )}
           </label>
         </div>
         <div className='mt-6'>
           <label htmlFor='phone'>
-            <h5 className='font-bold'>Your Phone</h5>
+            <h5 className='font-bold'>Tu teléfono</h5>
             <input
               type='text'
               name='phone'
               id='phone'
-              placeholder='(123) 456-7890'
+              placeholder='123-456-789'
               ref={register}
               className='mt-1 p-2 block w-full border-gray-400 rounded border-2'
             />
@@ -81,13 +81,13 @@ export default () => {
         </div>
         <div className='mt-6'>
           <label htmlFor='email'>
-            <h5 className='font-bold'>Email</h5>
+            <h5 className='font-bold'>Tu correo electrónico</h5>
             <input
               type='text'
               name='email'
               id='email'
               className='mt-1 p-2 block w-full border-gray-400 rounded border-2'
-              placeholder='your@email.com'
+              placeholder='correo@electronico.com'
               ref={register({
                 required: true,
                 pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
@@ -95,14 +95,14 @@ export default () => {
             />
             {errors.email && (
               <p className='text-error font-medium italic ml-2'>
-                Email is required
+                Necesitamos tu correo electrónico para poder confirmar tu orden.
               </p>
             )}
           </label>
         </div>
 
         <div className='mt-6'>
-          <h5 className='font-bold mb-2'>Select your Sourdough Bread:</h5>
+          <h5 className='font-bold mb-2'>Elige qué tipo de pan quieres:</h5>
           <div className='ml-4'>
             <label for='classic'>
               <input
@@ -113,7 +113,7 @@ export default () => {
                 name='classic'
                 value='Classic'
               />{' '}
-              Classic Weho Sourdough - $12.00 (10% Whole Wheat for added flavor)
+              Weho Sourdough Clásico - €12.00 (10% de harina integral)
             </label>
             <br />
             <label for='sesame'>
@@ -125,7 +125,7 @@ export default () => {
                 ref={register}
                 value='Sesame'
               />{' '}
-              Sesame Weho Sourdough - $14.50 (Unhulled Sesame Seeds Toasted)
+              Weho Sourdough con ajonjolí - €14.50 (Unhulled Sesame Seeds Toasted)
             </label>
             <br />
             <label for='olives'>
@@ -137,7 +137,7 @@ export default () => {
                 name='olives'
                 value='Olives'
               />{' '}
-              Olive Weho Sourdough - $16.50 (Olives, Pecans, Grated Lemon Zest,
+              Olive Weho Sourdough - €16.50 (Olives, Pecans, Grated Lemon Zest,
               Herbs de Provence)
             </label>
             <br />
@@ -146,26 +146,24 @@ export default () => {
 
         <div className='mt-6'>
           <label htmlFor='message'>
-            <h5 className='font-bold'>Tell us about your order:</h5>
+            <h5 className='font-bold'>Anota aquí cualquier indicación especial:</h5>
             <textarea
               ref={register}
               name='message'
               id='message'
               rows='3'
-              placeholder='Please include any additional details or requests about your order such as preferred pickup date and time, etc.'
+              placeholder='Puedes incluir aquí detalles adicionales preguntas.'
               className='mt-1 p-2 block w-full border-gray-400 rounded border-2'
             />
             {errors.message && (
               <p className='text-error font-medium italic ml-2'>
-                Please include your order or request.
+                Por favor incluye información adicional sobre tu orden
               </p>
             )}
           </label>
         </div>
         <div>
-          We will contact you after placing your order to arrange payment
-          information and pickup. Orders need to be placed at least 2 days in
-          advance to fit them into the baking schedule.
+          En cuanto tengamos tu orden nos pondremos en contacto contigo para confirmar los detalles de la orden y el pago. Hacemos muy pocos panes al día y necesitamos al menos dos días para programar el pedido.
         </div>
         <div className='submit-wrapper py-4'>
           <button

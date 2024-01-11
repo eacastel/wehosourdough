@@ -11,9 +11,9 @@ const Contact = () => {
         <SEO title='Order Form' />
         <main>
           <div className='mt-4 pt-4 text-center max-w-xl mx-auto'>
-            <h1>Place an Order for Pickup!</h1>
+            <h1>Ordena tu pan aquí</h1>
             <p>
-              To place an order fill out the form below send us a text or call
+              Para ordenar completa la siguiente forma con tus datos y tu pedido o envíanos un Whatsapp! 
               now: <br />
               <a href='tel:+1-‪323-963-3322‬'>
                 <span className='font-bold hover:underline'>
@@ -22,11 +22,9 @@ const Contact = () => {
               </a>
             </p>
             <p className='border border-brown shadow-md mt-4 p-4 rounded-md'>
-              All sourdough bread is made to order and requires payment in
-              advance. Once we receive the order we will contact you to arrange
-              payment via Venmo or Paypal. <br />
+              El pan se hace unicamente bajo pedido y es necesario completar el pago por anticipado.  Una vez que hayamos recibido tu orden nos pondremos en contacto contigo para afinar detalles de pago y tiempo de elaboración.  Los pagos se podrán realizar por  <br />
               <span className='font-bold'>
-                Price per loaf is $12. Curbside pick-up!
+                Precio base es de €12.
               </span>
             </p>
           </div>

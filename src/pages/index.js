@@ -23,7 +23,7 @@ const IndexPage = () => {
     '@context': 'https://schema.org',
     '@type': 'Bakery',
     name: 'Weho Sourdough',
-    description: 'Sourdough bread bakery in West Hollywood, California',
+    description: 'Pan artesanal de masa madre sourdough en Valencia, España.',
     image: 'https://wehosourdough.com/weho-sourdough-color-1800.png',
     url: 'https://wehosourdough.com',
     telephone: '‪(323) 963-3322‬',
@@ -32,7 +32,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO
-        title='Weho Sourdough - Sourdough bread in West Hollywood, California'
+        title='Weho Sourdough - Pan tipo sourdough de masa madre en Valencia, España'
         schemaMarkup={schema}
       />
       <main>
@@ -42,11 +42,10 @@ const IndexPage = () => {
               <h1 className='text-4xl font-normal text-bread  mb-4'>
                 Weho Sourdough
               </h1>
-              <p>We bake small batches of sourdough bread in West Hollywood!</p>
+              <p>¡Horneamos pan artesanal tipo sourdough de masa madre en Valencia!</p>
               <p className='py-4'>
                 <span className='font-bold'>
-                  We will be closed for the summer holidays. Please check in
-                  after August 20th. Thank you!
+                 Haz tu pedido hoy y prepárate para disfrutar este fabuloso pan preparado y horneado especialmente para tí como si tu lo hicieses en casa!
                 </span>
               </p>
               <Button />
@@ -62,26 +61,21 @@ const IndexPage = () => {
         </div>
         <div className='flex flex-col md:flex-row pt-4 '>
           <div className='lg:flex-grow md:w-1/3 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white'>
-            <h3 className='font-semibold text-xl mb-2'>Delicious</h3>
+            <h3 className='font-semibold text-xl mb-2'>Delicioso</h3>
             <p className='mb-2'>
-              Poetically, we started baking sourdough in 2016 for the beauty of
-              its 3 ingredients: Flour, Water and Salt. Practically, we bake
-              sourdough for its incomparable and irresistible taste.
+            Iniciamos en 2016 por la sublime combinación de solo 3 ingredientes: agua, harina y sal. Hoy, seguimos haciendo este pan por su incomparable e irresistible sabor.
             </p>
           </div>
           <div className='lg:flex-grow  md:w-1/3 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white'>
-            <h3 className='font-semibold text-xl mb-2'>Organic</h3>
+            <h3 className='font-semibold text-xl mb-2'>Natural</h3>
             <p className='mb-2'>
-              We use our own natural leaven cultivated in West Hollywood and
-              make our breads with 100% Organic King Arthur's Flour unless
-              otherwise specified.
+            Nuestra levadura natural se cultiva en magnífico clima de Valencia y de la Sierra Calderona. Elaboramos nuestros panes con harinas naturales y de la mejor calidad.
             </p>
           </div>
           <div className='lg:flex-grow  md:w-1/3 shadow-md rounded-md pb-4 pt-2 px-4 mb-4 mx-4 text-center bg-white'>
-            <h3 className='font-semibold text-xl mb-2'>Artisan</h3>
+            <h3 className='font-semibold text-xl mb-2'>Artesanal</h3>
             <p className='mb-2'>
-              Each loaf is made to order, carefully processed and baked to crisp
-              perfection! It doesn't get any more "small batch" than this.
+            Elaboramos cada pan a mano y unicamente bajo pedido. Lo fermentamos al menos 12 horas. Después lo horneamos hasta que quede dorado y crujiente.
             </p>
           </div>
         </div>
