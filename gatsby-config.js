@@ -7,8 +7,8 @@ module.exports = {
     title: "Weho Sourdough",
     siteUrl: "https://wehosourdough.com",
     author: "Weho Sourdough",
-    keywords: "Sourdough Bread, West Hollywood",
-    description: "Sourdough bread bakery in West Hollywood, California"
+    keywords: "Sourdough Bread, Pan artesanal, masa madre, Valencia, España",
+    description: "Pan de masa madre estilo sourdough en Valencia España"
   },
   plugins: [
     `gatsby-plugin-postcss`,
@@ -16,7 +16,9 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [process.env.GA_TRACKING_ID],
+        trackingIds: [
+       "process.env.GA_TRACKING_ID",
+        ],
       },
     },
     {
@@ -45,7 +47,7 @@ module.exports = {
       options: {
         icon: `src/images/icon.png`,
         lang: `en`,
-        name: `Weho Sourdough | West Hollywood Sourdough`,
+        name: `Weho Sourdough | Pan de masa madre en Valencia`,
         short_name: `Weho Sourdough`,
         start_url: `/`,
       },
