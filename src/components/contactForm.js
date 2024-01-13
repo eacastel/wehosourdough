@@ -98,70 +98,66 @@ export default function ContactForm() {
                   {errors.email && <p className='text-error font-medium italic ml-2'>Necesitamos tu correo electrónico para poder confirmar tu orden.</p>}
                 </label>
               </div>
-              <div className='mt-6'>
-          <h5 className='font-bold mb-2'>Elige qué tipo de pan quieres:</h5>
-          <div className='ml-4'>
-            <label for='classic'>
-              <input
-                className='mt-2'
-                type='checkbox'
-                id='classic'
-                ref={register}
-                name='classic'
-                value='Classic'
-              />{' '}
-              Weho Sourdough Clásico - €12.00 (10% de harina integral)
-            </label>
-            <br />
-            <label for='sesame'>
-              <input
-                className='mt-2'
-                type='checkbox'
-                id='sesame'
-                name='sesame'
-                ref={register}
-                value='Sesame'
-              />{' '}
-              Weho Sourdough con ajonjolí - €14.50 (Unhulled Sesame Seeds Toasted)
-            </label>
-            <br />
-            <label for='olives'>
-              <input
-                className='mt-2'
-                type='checkbox'
-                id='olives'
-                ref={register}
-                name='olives'
-                value='Olives'
-              />{' '}
-              Olive Weho Sourdough - €16.50 (Olives, Pecans, Grated Lemon Zest,
-              Herbs de Provence)
-            </label>
-            <br />
-          </div>
-        </div>
 
-        <div className='mt-6'>
-          <label htmlFor='message'>
-            <h5 className='font-bold'>Anota aquí cualquier indicación especial:</h5>
-            <textarea
-              ref={register}
-              name='message'
-              id='message'
-              rows='3'
-              placeholder='Puedes incluir aquí detalles adicionales preguntas.'
-              className='mt-1 p-2 block w-full border-gray-400 rounded border-2'
-            />
-            {errors.message && (
-              <p className='text-error font-medium italic ml-2'>
-                Por favor incluye información adicional sobre tu orden
-              </p>
-            )}
-          </label>
-        </div>
-        <div>
-          En cuanto tengamos tu orden nos pondremos en contacto contigo para confirmar los detalles de la orden y el pago. Hacemos muy pocos panes al día y necesitamos al menos dos días para programar el pedido.
-        </div>
+                            {/* Bread Type Selection */}
+                            <div className='mt-6'>
+                <h5 className='font-bold mb-2'>Elige qué tipo de pan quieres:</h5>
+                <div className='ml-4'>
+                  <label htmlFor='classic'>
+                    <input
+                      className='mt-2'
+                      type='checkbox'
+                      id='classic'
+                      {...register('classic')}
+                      value='Classic'
+                    />{' '}
+                    Weho Sourdough Clásico - €6.25 (10% de harina integral)
+                  </label>
+                  <br />
+                  <label htmlFor='sesame'>
+                    <input
+                      className='mt-2'
+                      type='checkbox'
+                      id='sesame'
+                      {...register('sesame')}
+                      value='Sesame'
+                    />{' '}
+                    Weho Sourdough con ajonjolí - €8.50 (Semillas enteras y tostadas de ajonjolí)
+                  </label>
+                  <br />
+                  <label htmlFor='olives'>
+                    <input
+                      className='mt-2'
+                      type='checkbox'
+                      id='olives'
+                      {...register('olives')}
+                      value='Olives'
+                    />{' '}
+                    Weho Sourdough con aceitunas y nuez pacana - €9.50 (Aceitunas maceradas, nuez pacana, raspadura de limón, Herbs de Provence)
+                  </label>
+                  <br />
+                </div>
+              </div>
+
+              {/* Message Textarea */}
+              <div className='mt-6'>
+                <label htmlFor='message'>
+                  <h5 className='font-bold'>Anota aquí cualquier indicación especial:</h5>
+                  <textarea
+                    {...register('message')}
+                    id='message'
+                    rows='3'
+                    className='mt-1 p-2 block w-full border-gray-400 rounded border-2'
+                  />
+                  {errors.message && <p className='text-error font-medium italic ml-2'>Por favor incluye información adicional sobre tu orden</p>}
+                </label>
+              </div>
+
+              {/* Additional Information */}
+              <div>
+                En cuanto tengamos tu orden nos pondremos en contacto contigo para confirmar los detalles de la orden y el pago. Hacemos muy pocos panes al día y necesitamos al menos dos días para programar el pedido.
+              </div>
+
               <div className='submit-wrapper py-4'>
                 <button
                   type='submit'
