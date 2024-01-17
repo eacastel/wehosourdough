@@ -95,7 +95,7 @@ const Gallery = () => {
 
   return (
     <div className="mx-4 mt-8 text-center">
-        <gallery className="grid grid-cols-3 gap-4">
+        <Gallery className="grid grid-cols-3 gap-4">
         <div className="object-fill">
             <Img className="rounded-md object-cover h-full"
             fluid={data.imgOne.childImageSharp.fluid}
@@ -168,7 +168,7 @@ const Gallery = () => {
             alt="Weho Sourdough Logo"
             />
         </div>
-    </gallery>
+    </Gallery>
     </div>
   )
 };
