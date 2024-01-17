@@ -89,9 +89,155 @@ export default function ContactForm() {
                   )}
                 </label>
               </div>
+
+              {/* Phone Input */}
               <div className="mt-6">
-                {/* ... Rest of the form fields ... */}
+                <label htmlFor="phone">
+                  <h5 className="font-bold">Tu teléfono</h5>
+                  <Controller
+                    name="phone"
+                    control={control}
+                    defaultValue=""
+                    render={({ field }) => (
+                      <input
+                        type="text"
+                        {...field}
+                        id="phone"
+                        placeholder="123-456-789"
+                        className="mt-1 p-2 block w-full border-gray-400 rounded border-2"
+                      />
+                    )}
+                  />
+                </label>
               </div>
+
+              {/* Email Input */}
+              <div className="mt-6">
+                <label htmlFor="email">
+                  <h5 className="font-bold">Tu correo electrónico</h5>
+                  <Controller
+                    name="email"
+                    control={control}
+                    defaultValue=""
+                    rules={{
+                      required: "Necesitamos tu correo electrónico para poder confirmar tu pedido.",
+                      pattern:
+                        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    }}
+                    render={({ field }) => (
+                      <input
+                        type="text"
+                        {...field}
+                        id="email"
+                        placeholder="correo@electronico.com"
+                        className="mt-1 p-2 block w-full border-gray-400 rounded border-2"
+                      />
+                    )}
+                  />
+                  {errors.email && (
+                    <p className="text-error font-medium italic ml-2">
+                      {errors.email.message}
+                    </p>
+                  )}
+                </label>
+              </div>
+
+              {/* Bread Type Selection */}
+              <div className="mt-6">
+                <h5 className="font-bold mb-2">
+                  Elige qué tipo de pan quieres:
+                </h5>
+                <div className="ml-4">
+                  {/* Classic Checkbox */}
+                  <label htmlFor="classic">
+                    <Controller
+                      name="classic"
+                      control={control}
+                      defaultValue={false}
+                      render={({ field }) => (
+                        <input
+                          type="checkbox"
+                          {...field}
+                          id="classic"
+                          value="Classic"
+                          className="mt-2"
+                        />
+                      )}
+                    />
+                    Weho Sourdough Clásico - €6.25 (10% de harina integral)
+                  </label>
+                  <br />
+                  {/* Sesame Checkbox */}
+                  <label htmlFor="sesame">
+                    <Controller
+                      name="sesame"
+                      control={control}
+                      defaultValue={false}
+                      render={({ field }) => (
+                        <input
+                          type="checkbox"
+                          {...field}
+                          id="sesame"
+                          value="Sesame"
+                          className="mt-2"
+                        />
+                      )}
+                    />
+                    Weho Sourdough con ajonjolí - €8.50 (Semillas enteras y
+                    tostadas de ajonjolí)
+                  </label>
+                  <br />
+                  {/* Olives Checkbox */}
+                  <label htmlFor="olives">
+                    <Controller
+                      name="olives"
+                      control={control}
+                      defaultValue={false}
+                      render={({ field }) => (
+                        <input
+                          type="checkbox"
+                          {...field}
+                          id="olives"
+                          value="Olives"
+                          className="mt-2"
+                        />
+                      )}
+                    />
+                    Weho Sourdough con aceitunas y nuez pacana - €9.50
+                    (Aceitunas maceradas, nuez pacana, raspadura de limón, Herbs
+                    de Provence)
+                  </label>
+                  <br />
+                </div>
+              </div>
+
+              {/* Message Textarea */}
+              <div className="mt-6">
+                <label htmlFor="message">
+                  <h5 className="font-bold">
+                    Anota aquí cualquier indicación especial:
+                  </h5>
+                  <Controller
+                    name="message"
+                    control={control}
+                    defaultValue=""
+                    render={({ field }) => (
+                      <textarea
+                        {...field}
+                        id="message"
+                        rows="3"
+                        className="mt-1 p-2 block w-full border-gray-400 rounded border-2"
+                      />
+                    )}
+                  />
+                  {errors.message && (
+                    <p className="text-error font-medium italic ml-2">
+                      {errors.message.message}
+                    </p>
+                  )}
+                </label>
+              </div>
+
               {/* Additional Information */}
               <div>
                 En cuanto tengamos tu orden nos pondremos en contacto contigo
