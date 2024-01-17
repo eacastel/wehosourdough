@@ -46,8 +46,8 @@ export default function ContactForm() {
         {submitted ? (
           <div className="bg-wheat max-w-xl mx-auto text-center m-4 p-6 rounded-md">
             <p>
-              Thank you for your Inquiry! Your message was sent, and you will be
-              hearing from our staff shortly.{" "}
+              Muchas gracias por tu pedido! 
+              Tu mensaje ha sido enviado y nos pondremos en contacto contigo lo mas pronto posible. {" "}
             </p>
             <button
               className="underline font-bold"
@@ -164,7 +164,7 @@ export default function ContactForm() {
                         />
                       )}
                     />
-                    Weho Sourdough Clásico - €6.25 (10% de harina integral)
+                    Weho Sourdough Clásico - €7.50 (10% de harina integral)
                   </label>
                   <br />
                   {/* Sesame Checkbox */}
