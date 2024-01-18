@@ -3,7 +3,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { useStaticQuery, graphql } from 'gatsby'
 import Button from '../components/button'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Gallery from '../components/gallery'
 import Footer from '../components/footer'
 
@@ -12,13 +12,20 @@ const IndexPage = () => {
     query {
       imgEleven: file(relativePath: { eq: "front-image.jpg" }) {
         childImageSharp {
-          fluid(maxWidth: 2500) {
-            ...GatsbyImageSharpFluid
-          }
+          gatsbyImageData(
+            layout: FULL_WIDTH
+            placeholder: BLURRED
+            formats: [AUTO, WEBP]
+            quality: 100
+            width: 2500
+          )
         }
       }
     }
-  `)
+  `);
+
+  const image = getImage(data.imgEleven);
+
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Bakery',
@@ -26,7 +33,7 @@ const IndexPage = () => {
     description: 'Pan artesanal de masa madre sourdough en Valencia, España.',
     image: 'https://wehosourdough.com/weho-sourdough-color-1800.png',
     url: 'https://wehosourdough.com',
-    telephone: '‪(323) 963-3322‬',
+    telephone: '(323) 963-3322',
   }
 
   return (
@@ -51,9 +58,7 @@ const IndexPage = () => {
               <Button />
             </div>
             <div className='md:w-1/2 h-full'>
-              <Img
-                className='mt-6 rounded-md shadow-md md:mr-8'
-                fluid={data.imgEleven.childImageSharp.fluid}
+            <GatsbyImage image={image}  className='mt-6 rounded-md shadow-md md:mr-8'
                 alt='ears on a round loaf of sourdough'
               />
             </div>

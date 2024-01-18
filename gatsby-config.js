@@ -46,7 +46,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         icon: `src/images/icon.png`,
-        lang: `en`,
+        lang: `es`,
         name: `Weho Sourdough | Pan de masa madre en Valencia`,
         short_name: `Weho Sourdough`,
         start_url: `/`,

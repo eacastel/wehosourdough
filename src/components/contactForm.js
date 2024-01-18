@@ -23,6 +23,8 @@ export default function ContactForm() {
         },
       });
 
+      console.log("Response Status:", response.status);
+
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
@@ -30,6 +32,7 @@ export default function ContactForm() {
       setSubmitted(true);
       reset();
     } catch (error) {
+      console.error("Error submitting form:", error);
       setError("submit", {
         type: "manual",
         message: `Oops! There seems to be an issue! ${error.message}`,
@@ -40,14 +43,16 @@ export default function ContactForm() {
   return (
     <div className="page contact-page">
       <div className="text-side">
-        {errors.submit && <p className="msg-error">{errors.submit.message}</p>}
+        {errors.submit && (
+          <p className="msg-error">{errors.submit.message}</p>
+        )}
       </div>
       <div className="form-side">
         {submitted ? (
           <div className="bg-wheat max-w-xl mx-auto text-center m-4 p-6 rounded-md">
             <p>
-              Muchas gracias por tu pedido! 
-              Tu mensaje ha sido enviado y nos pondremos en contacto contigo lo mas pronto posible. {" "}
+              Muchas gracias por tu pedido!
+              Tu mensaje ha sido enviado y nos pondremos en contacto contigo lo mas pronto posible.{" "}
             </p>
             <button
               className="underline font-bold"
@@ -60,7 +65,6 @@ export default function ContactForm() {
         ) : (
           <div className="max-w-xl mx-auto">
             <form onSubmit={handleSubmit(onSubmit)} method="post">
-              {/* Name Input */}
               <div className="mt-6">
                 <label htmlFor="name">
                   <h5 className="font-bold">Tu nombre</h5>
@@ -90,7 +94,6 @@ export default function ContactForm() {
                 </label>
               </div>
 
-              {/* Phone Input */}
               <div className="mt-6">
                 <label htmlFor="phone">
                   <h5 className="font-bold">Tu teléfono</h5>
@@ -111,7 +114,6 @@ export default function ContactForm() {
                 </label>
               </div>
 
-              {/* Email Input */}
               <div className="mt-6">
                 <label htmlFor="email">
                   <h5 className="font-bold">Tu correo electrónico</h5>
@@ -142,76 +144,34 @@ export default function ContactForm() {
                 </label>
               </div>
 
-              {/* Bread Type Selection */}
               <div className="mt-6">
                 <h5 className="font-bold mb-2">
                   Elige qué tipo de pan quieres:
                 </h5>
                 <div className="ml-4">
-                  {/* Classic Checkbox */}
-                  <label htmlFor="classic">
-                    <Controller
-                      name="classic"
-                      control={control}
-                      defaultValue={false}
-                      render={({ field }) => (
-                        <input
-                          type="checkbox"
-                          {...field}
-                          id="classic"
-                          value="Classic"
-                          className="mt-2"
-                        />
-                      )}
-                    />
-                    Weho Sourdough Clásico - €7.50 (10% de harina integral)
-                  </label>
-                  <br />
-                  {/* Sesame Checkbox */}
-                  <label htmlFor="sesame">
-                    <Controller
-                      name="sesame"
-                      control={control}
-                      defaultValue={false}
-                      render={({ field }) => (
-                        <input
-                          type="checkbox"
-                          {...field}
-                          id="sesame"
-                          value="Sesame"
-                          className="mt-2"
-                        />
-                      )}
-                    />
-                    Weho Sourdough con ajonjolí - €8.50 (Semillas enteras y
-                    tostadas de ajonjolí)
-                  </label>
-                  <br />
-                  {/* Olives Checkbox */}
-                  <label htmlFor="olives">
-                    <Controller
-                      name="olives"
-                      control={control}
-                      defaultValue={false}
-                      render={({ field }) => (
-                        <input
-                          type="checkbox"
-                          {...field}
-                          id="olives"
-                          value="Olives"
-                          className="mt-2"
-                        />
-                      )}
-                    />
-                    Weho Sourdough con aceitunas y nuez pacana - €9.50
-                    (Aceitunas maceradas, nuez pacana, raspadura de limón, Herbs
-                    de Provence)
-                  </label>
-                  <br />
+                  {["Classic", "Sesame", "Olives"].map((breadType) => (
+                    <label key={breadType} htmlFor={breadType.toLowerCase()}>
+                      <Controller
+                        name={breadType.toLowerCase()}
+                        control={control}
+                        defaultValue={false}
+                        render={({ field }) => (
+                          <input
+                            type="checkbox"
+                            {...field}
+                            id={breadType.toLowerCase()}
+                            value={breadType}
+                            className="mt-2"
+                          />
+                        )}
+                      />
+                      Weho Sourdough {breadType} - €{getBreadPrice(breadType)}
+                      <br />
+                    </label>
+                  ))}
                 </div>
               </div>
 
-              {/* Message Textarea */}
               <div className="mt-6">
                 <label htmlFor="message">
                   <h5 className="font-bold">
@@ -238,7 +198,6 @@ export default function ContactForm() {
                 </label>
               </div>
 
-              {/* Additional Information */}
               <div>
                 En cuanto tengamos tu orden nos pondremos en contacto contigo
                 para confirmar los detalles de la orden y el pago. Hacemos muy
@@ -260,4 +219,10 @@ export default function ContactForm() {
       </div>
     </div>
   );
+}
+
+function getBreadPrice(breadType) {
+  // You may implement a logic to get the price based on the bread type
+  // For now, returning a placeholder value
+  return 7.5;
 }
