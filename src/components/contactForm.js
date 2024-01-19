@@ -13,7 +13,7 @@ export default function ContactForm() {
 
   const onSubmit = async (data) => {
     try {
-      const response = await fetch(`${process.env.GATEWAY_URL}`, {
+      const response = await fetch(`${process.env.GATSBY_GATEWAY_URL}`, {
         method: "POST",
         mode: "cors",
         cache: "no-cache",
