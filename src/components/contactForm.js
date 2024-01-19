@@ -11,6 +11,19 @@ export default function ContactForm() {
     reset,
   } = useForm();
 
+  function getBreadPrice(breadType) {
+    switch (breadType) {
+      case "Classic":
+        return (6.25).toFixed(2); 
+      case "Sesame":
+        return (6.25 + 1.50).toFixed(2);
+      case "Olives":
+        return (6.25 + 2.50).toFixed(2); 
+      default:
+        return (6.50).toFixed(2); 
+    }
+  }
+
   const onSubmit = async (data) => {
     try {
       const response = await fetch(`${process.env.GATSBY_GATEWAY_URL}`, {
@@ -146,7 +159,7 @@ export default function ContactForm() {
 
               <div className="mt-6">
                 <h5 className="font-bold mb-2">
-                  Elige qué tipo de pan quieres:
+                  Elige el tipo de pan que quieres:
                 </h5>
                 <div className="ml-4">
                   {["Classic", "Sesame", "Olives"].map((breadType) => (
@@ -165,7 +178,7 @@ export default function ContactForm() {
                           />
                         )}
                       />
-                      Weho Sourdough {breadType} - €{getBreadPrice(breadType)}
+                      &nbsp;Weho Sourdough {breadType} - €{getBreadPrice(breadType)}
                       <br />
                     </label>
                   ))}
@@ -224,5 +237,5 @@ export default function ContactForm() {
 function getBreadPrice(breadType) {
   // You may implement a logic to get the price based on the bread type
   // For now, returning a placeholder value
-  return 7.5;
+  return (3.25).toFixed(2);
 }

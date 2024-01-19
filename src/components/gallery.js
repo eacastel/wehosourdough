@@ -138,28 +138,29 @@ const Gallery = () => {
         }
       }
     }
-  `);
+    `);
 
-  return (
-    <div className="mx-4 mt-8 text-center">
-      <div className="grid grid-cols-3 gap-4">
-        {Array.from({ length: 12 }).map((_, index) => {
-          const imgKey = `img${index + 1}`;
-          const image = getImage(data[imgKey]);
+    console.log('Data:', data);
 
-          return (
-            <div key={imgKey} className="object-fill">
-              <GatsbyImage
-                className="rounded-md object-cover h-full"
-                image={image}
-                alt={`Gallery Image ${index + 1}`}
-              />
-            </div>
-          );
-        })}
+    return (
+      <div className="mx-4 mt-8 text-center">
+        <div className="grid grid-cols-3 gap-4">
+          {Object.values(data).map((item, index) => {
+            const image = getImage(item);
+    
+            return (
+              <div key={`img${index + 1}`} className="object-fill">
+                <GatsbyImage
+                  className="rounded-md object-cover h-full"
+                  image={image}
+                  alt={`Gallery Image ${index + 1}`}
+                />
+              </div>
+            );
+          })}
+        </div>
       </div>
-    </div>
-  );
-};
-
-export default Gallery;
+    );
+  };
+  
+  export default Gallery;

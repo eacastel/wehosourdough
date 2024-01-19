@@ -23,7 +23,7 @@ const Contact = () => {
             <p className='border border-brown shadow-md mt-4 p-4 rounded-md'>
               El pan se fabrica unicamente bajo pedido y es necesario completar el pago por anticipado.  Una vez que hayamos recibido tu orden nos pondremos en contacto contigo para acordar los detalles del pago y el tiempo de elaboración. <br />
               <span className='font-bold'>
-                Precio base es de €7.50.
+                Precio base es de €6.25.
               </span>
             </p>
           </div>
