@@ -12,7 +12,7 @@ const Header = () => {
             placeholder: BLURRED
             formats: [AUTO, WEBP]
             quality: 100
-            maxWidth: 1600
+            width: 1600
           )
         }
       }
